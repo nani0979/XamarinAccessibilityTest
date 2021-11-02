@@ -2,11 +2,21 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AccessibilityTesting.Label.FirstLabelPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="32"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="不在tree裡" AutomationProperties.IsInAccessibleTree="False"/>
+            <Label Text="含有Name屬性" AutomationProperties.Name="Label" AutomationProperties.IsInAccessibleTree="True"/>
+            <Label Text="含有Name以及HelpText屬性" AutomationProperties.Name="Label" AutomationProperties.HelpText="幫助語句" AutomationProperties.IsInAccessibleTree="True"/>
+            <Label Text="含有AutmationID屬性" AutomationId="我的ID" AutomationProperties.IsInAccessibleTree="True"/>
+
+            <Button Text="go to next Page" Clicked="Button_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
