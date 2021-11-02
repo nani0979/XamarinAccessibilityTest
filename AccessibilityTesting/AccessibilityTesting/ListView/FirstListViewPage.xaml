@@ -4,9 +4,15 @@
              x:Class="AccessibilityTesting.ListView.FirstListViewPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <ListView  AutomationProperties.IsInAccessibleTree="False" ItemsSource="{Binding _items}"/>
+            <ListView x:Name="lv1"  AutomationProperties.IsInAccessibleTree="True" ItemsSource="{Binding _items}"/>
+            <ListView x:Name="lv2"  AutomationProperties.Name="ListView" AutomationProperties.IsInAccessibleTree="True" ItemsSource="{Binding _items}"/>
+            <ListView x:Name="lv3" AutomationProperties.HelpText="幫助語句" AutomationProperties.IsInAccessibleTree="True" ItemsSource="{Binding _items}"/>
+            <ListView x:Name="lv4" AutomationProperties.Name="ListView" AutomationProperties.HelpText="幫助語句" AutomationProperties.IsInAccessibleTree="True" ItemsSource="{Binding _items}"/>
+            <ListView x:Name="lv5" AutomationId="我的ID" AutomationProperties.IsInAccessibleTree="True" ItemsSource="{Binding _items}"/>
+            <ListView x:Name="lv6" AutomationId="我的ID" AutomationProperties.Name="ListView" AutomationProperties.IsInAccessibleTree="True" ItemsSource="{Binding _items}"/>
+            <ListView x:Name="lv7" AutomationId="我的ID" AutomationProperties.HelpText="幫助語句" AutomationProperties.IsInAccessibleTree="True" ItemsSource="{Binding _items}"/>
+            <ListView x:Name="lv8" AutomationId="我的ID" AutomationProperties.Name="ListView" AutomationProperties.HelpText="幫助語句" AutomationProperties.IsInAccessibleTree="True" ItemsSource="{Binding _items}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
