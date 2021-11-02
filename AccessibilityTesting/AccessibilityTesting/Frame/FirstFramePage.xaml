@@ -4,9 +4,15 @@
              x:Class="AccessibilityTesting.Frame.FirstFramePage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Frame  AutomationProperties.IsInAccessibleTree="False" />
+            <Frame  AutomationProperties.IsInAccessibleTree="True"/>
+            <Frame  AutomationProperties.Name="Frame" AutomationProperties.IsInAccessibleTree="True"/>
+            <Frame  AutomationProperties.HelpText="幫助語句" AutomationProperties.IsInAccessibleTree="True"/>
+            <Frame  AutomationProperties.Name="Frame" AutomationProperties.HelpText="幫助語句" AutomationProperties.IsInAccessibleTree="True"/>
+            <Frame  AutomationId="我的ID" AutomationProperties.IsInAccessibleTree="True"/>
+            <Frame  AutomationId="我的ID" AutomationProperties.Name="Frame" AutomationProperties.IsInAccessibleTree="True"/>
+            <Frame  AutomationId="我的ID" AutomationProperties.HelpText="幫助語句" AutomationProperties.IsInAccessibleTree="True"/>
+            <Frame  AutomationId="我的ID" AutomationProperties.Name="Frame" AutomationProperties.HelpText="幫助語句" AutomationProperties.IsInAccessibleTree="True"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

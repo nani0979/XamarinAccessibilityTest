@@ -4,9 +4,16 @@
              x:Class="AccessibilityTesting.Entry.FirstEntryPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <SearchBar Text="不在tree裡" AutomationProperties.IsInAccessibleTree="False"/>
+            <SearchBar Text="不含任何屬性" AutomationProperties.IsInAccessibleTree="True"/>
+            <SearchBar Text="含有Name屬性" AutomationProperties.Name="SearchBar" AutomationProperties.IsInAccessibleTree="True"/>
+            <SearchBar Text="含有HelpText屬型" AutomationProperties.HelpText="幫助語句" AutomationProperties.IsInAccessibleTree="True"/>
+            <SearchBar Text="含有Name以及HelpText屬性" AutomationProperties.Name="SearchBar" AutomationProperties.HelpText="幫助語句" AutomationProperties.IsInAccessibleTree="True"/>
+            <SearchBar Text="含有AutmationID屬性" AutomationId="我的ID" AutomationProperties.IsInAccessibleTree="True"/>
+            <SearchBar Text="含有Name以及ID屬性" AutomationId="我的ID" AutomationProperties.Name="SearchBar" AutomationProperties.IsInAccessibleTree="True"/>
+            <SearchBar Text="含有Help以及ID屬性" AutomationId="我的ID" AutomationProperties.HelpText="幫助語句" AutomationProperties.IsInAccessibleTree="True"/>
+            <SearchBar Text="含有Name, Help以及ID屬性" AutomationId="我的ID" AutomationProperties.Name="SearchBar" AutomationProperties.HelpText="幫助語句" AutomationProperties.IsInAccessibleTree="True"/>
+            <Button Text="click" Clicked="Button_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
