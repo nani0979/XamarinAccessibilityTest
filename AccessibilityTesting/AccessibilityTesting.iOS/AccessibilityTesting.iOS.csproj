@@ -136,4 +136,7 @@
       <Name>AccessibilityTesting</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="service\" />
+  </ItemGroup>
 </Project>
