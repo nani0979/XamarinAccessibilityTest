@@ -11,24 +11,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-[assembly: Xamarin.Forms.Dependency(typeof(IAccessibilityManager))]
+using AccessibilityTesting.Droid.service;
+[assembly: Xamarin.Forms.Dependency(typeof(AndroidAccessibilityManager))]
 namespace AccessibilityTesting.Droid.service
 {
     public class AndroidAccessibilityManager : IAccessibilityManager
-    { ///
+    { 
+        ///
       /// Announces the accessibility text passed based on the TalkBack or screen reader enabled. ///
       /// The text to speak/announce 
+      /// 
+        public AndroidAccessibilityManager() 
+        {
+            Console.WriteLine(">>Android AccessibilityManager");
+        }
+
+        private AccessibilityManager _manager = (AccessibilityManager)Application.Context.GetSystemService(Android.App.Application.AccessibilityService);
         public void AnnounceAccessibility(string speakText)
         {
-            AccessibilityManager manager = (AccessibilityManager)Android.App.Application.Context.GetSystemService(Android.App.Application.AccessibilityService);
-            if (!(manager.IsEnabled || manager.IsTouchExplorationEnabled))
+            if (!(_manager.IsEnabled || _manager.IsTouchExplorationEnabled))
                 return;
 
             // Sends the accessibility event to announce.
             AccessibilityEvent e = AccessibilityEvent.Obtain();
             e.EventType = EventTypes.Announcement;
-            e.Text.Add(new Java.Lang.String(speakText));
-            manager.SendAccessibilityEvent(e);
+            e.Text.Add(new Java.Lang.String(speakText));            
+            _manager.SendAccessibilityEvent(e);
         }
     }
 }
