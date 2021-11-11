@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
+using AccessibilityTesting.ModelTest;
 namespace AccessibilityTesting
 {
     public partial class App : Application
@@ -10,7 +10,7 @@ namespace AccessibilityTesting
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new Page1());
         }
 
         protected override void OnStart()
