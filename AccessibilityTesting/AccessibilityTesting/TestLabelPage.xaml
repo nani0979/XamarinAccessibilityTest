@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:patch="clr-namespace:Forms9Patch;assembly=Forms9Patch"
+             x:Class="AccessibilityTesting.TestLabelPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <!--Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s-->
+            <StackLayout>
+            <StackLayout>
+                <patch:Label Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+                             Lines="5" AutoFit="Lines" FontSize="18"/>
+                <BoxView BackgroundColor="Red" HeightRequest="2"/>
+                <!---->
+                <patch:Label Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" Lines="5" Fit="Lines" FontSize="18"/>
+                <BoxView BackgroundColor="Red" HeightRequest="2"/>
+                <!---->
+                <patch:Label Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" MaxLines="5" AutoFit="Lines" FontSize="18"/>
+                <!---->
+                <BoxView BackgroundColor="Red" HeightRequest="2"/>
+                <patch:Label Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" MaxLines="5" Fit="Lines" FontSize="18"/>
+                <!---->
+                <BoxView BackgroundColor="Red" HeightRequest="2"/>
+                <patch:Label Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" MaxLines="5" Fit="Width" FontSize="18"/>
+                <!---->
+                <!---->
+                <BoxView BackgroundColor="Red" HeightRequest="2"/>
+                <patch:Label Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" Lines="5" AutoFit="Width" FontSize="18"/>
+                <!---->
+                <BoxView BackgroundColor="Red" HeightRequest="2"/>
+                <patch:Label Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" Lines="5" Fit="Width" FontSize="18"/>
+                <!---->
+                <BoxView BackgroundColor="Red" HeightRequest="2"/>
+                <patch:Label Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" MaxLines="5" AutoFit="Width" FontSize="18"/>
+                <BoxView BackgroundColor="Red" HeightRequest="2"/>
+            </StackLayout>
+            <StackLayout>
+                    <BoxView BackgroundColor="Blue" HeightRequest="10"/>
+                    <patch:Label Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+                             Lines="5" AutoFit="Lines" MinFontSize="18" FontSize="30"/>
+                <BoxView BackgroundColor="Red" HeightRequest="2"/>
+                <!---->
+                    <patch:Label Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" Lines="5" Fit="Lines" MinFontSize="18" FontSize="30"/>
+                <BoxView BackgroundColor="Red" HeightRequest="2"/>
+                <!---->
+                    <patch:Label Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" MaxLines="5" AutoFit="Lines" MinFontSize="18" FontSize="30"/>
+                <!---->
+                <BoxView BackgroundColor="Red" HeightRequest="2"/>
+                    <patch:Label Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" MaxLines="5" Fit="Lines" MinFontSize="18" FontSize="30"/>
+                <!---->
+                <BoxView BackgroundColor="Red" HeightRequest="2"/>
+                    <patch:Label Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" MaxLines="5" Fit="Width" MinFontSize="18" FontSize="30"/>
+                <!---->
+                <!---->
+                <BoxView BackgroundColor="Red" HeightRequest="2"/>
+                    <patch:Label Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" Lines="5" AutoFit="Width" MinFontSize="18" FontSize="30"/><!--Good-->
+                <!---->
+                <BoxView BackgroundColor="Red" HeightRequest="2"/>
+                    <patch:Label Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" Lines="5" Fit="Width" MinFontSize="18" FontSize="30"/><!--Good-->
+                    <!---->
+                <BoxView BackgroundColor="Red" HeightRequest="2"/>
+                    <patch:Label Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" MaxLines="5" AutoFit="Width" MinFontSize="18" FontSize="30"/>
+                <BoxView BackgroundColor="Red" HeightRequest="2"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
