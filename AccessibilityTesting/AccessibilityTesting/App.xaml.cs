@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using AccessibilityTesting.ModelTest;
+using AccessibilityTesting.DeepLinkTest;
 namespace AccessibilityTesting
 {
     public partial class App : Application
@@ -10,7 +11,7 @@ namespace AccessibilityTesting
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new TestLabelPage());
+            MainPage = new NavigationPage(new DeepLinkPage());
         }
 
         protected override void OnStart()
