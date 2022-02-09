@@ -27,5 +27,18 @@ namespace AccessibilityTesting.iOS
 
             return base.FinishedLaunching(app, options);
         }
+
+        public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
+        {
+            if (url.Host.Equals("Notify_WMR_of_User_Onboard"))
+                Console.WriteLine(">>User_Onboard");
+            if (url.Host.Equals("Notify_WMR_of_SIG_Unavailable"))
+                Console.WriteLine(">>Unavailable");
+            if (url.Host.Equals("Notify_WMR_no_Docking_Beacon"))
+                Console.WriteLine("no docking");
+            // TODO check return boolean value meaning.
+                return true;
+            //return base.OpenUrl(app, url, options);
+        }
     }
 }
