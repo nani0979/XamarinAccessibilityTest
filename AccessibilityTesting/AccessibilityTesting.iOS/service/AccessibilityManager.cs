@@ -8,12 +8,12 @@ using Xamarin.Forms;
 using AccessibilityTesting.iOS.service;
 using AccessibilityTesting.Interface;
 
-[assembly: Dependency(typeof(IOSAccessibilityManager)]
+[assembly: Dependency(typeof(IOSAccessibilityManager))]
 namespace AccessibilityTesting.iOS.service
 {
     public class IOSAccessibilityManager : IAccessibilityManager
     {
-        public AccessibilityManager() { }
+        public IOSAccessibilityManager() { }
 
         public void AnnounceAccessibility(string speakText)
         {
@@ -40,5 +40,4 @@ public class IosAccessibilityManager : IAccessibilityManager
     // Post notification to announce the accessibility text.
     UIAccessibility.PostNotification(UIAccessibilityPostNotification.Announcement, new NSString(speakText));
     }
-}
 }
