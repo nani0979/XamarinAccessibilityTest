@@ -47,5 +47,10 @@
 			<string>Viewer</string>
 		</dict>
 	</array>
+  <key>LSApplicationQueriesSchemes</key>
+  <array>
+    <string>SeeingIGo</string>
+    <string>WheresMyRide</string>
+  </array>
 </dict>
 </plist>
