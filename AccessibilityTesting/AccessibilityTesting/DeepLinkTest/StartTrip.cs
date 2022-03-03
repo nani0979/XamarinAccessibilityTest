@@ -7,9 +7,9 @@ namespace AccessibilityTesting.DeepLinkTest
     static public class StartTrip
     {
         const string StartTripnLink = "SeeingIGo://Notify_SIG_of_Start_Trip?rider_name={0}&&rider_id={1}";
-        static public Uri getStartTripLink(string RiderID, string RiderName)
+        static public string getStartTripLink(string RiderID, string RiderName)
         {
-            return new Uri(string.Format(StartTripnLink, RiderName, RiderID));
+            return string.Format(StartTripnLink, RiderName, RiderID);
         }
     }
 }

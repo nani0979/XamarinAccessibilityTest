@@ -34,6 +34,7 @@
                             <Button x:Name="SelectTripButton" Text="SelectTrip" FontSize="Large" Clicked="SelectTripButton_Clicked"/>
                     </StackLayout>
             </Frame>
+            <Button Text="122434" Clicked="Button_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
